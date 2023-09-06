@@ -1,0 +1,276 @@
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #B7A986;
+    margin: 30px 50px;
+    line-height: 1.4;
+}
+
+.container{
+    display: grid;
+    grid-gap:30px;
+}
+
+.btn{
+   background-color: #de6757; 
+   font-size: 1em;
+   color: aliceblue;
+   padding: 10px 30px;
+   border-radius: 20px;
+   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+   border:0;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.btn:hover{
+    transform: scale(0.9);
+}
+
+img {
+    max-width: 100%;
+}
+
+/*header*/
+.header{
+    position: relative;
+    height: 30vh;
+}
+.header img{
+    position: absolute;
+    top: -170px;
+    z-index: -1;
+}
+/*menu*/
+.menu ul{
+    display: grid;
+    grid-gap:20px;
+    list-style: none;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.menu a{
+    background-color: #de6757;
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    color:aliceblue;
+    transition:0,2s;
+}
+
+.menu a:hover{
+    transform: scale(0.9);
+}
+
+/*section offer*/
+.wrapper{
+    display: grid;
+    grid-gap:20px;
+    grid-template-areas: 
+    "offer offer box1"
+    "offer offer box2";
+}
+.offer{
+    grid-area: offer;
+    min-height: 400px;
+    background-image: url(girl-7889973_1280.jpg);
+    background-image: cover;
+    background-position: center center;
+    padding: 30px;
+    opacity: 0.9;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    border-radius: 10px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.offer h1{
+    font-size: 4rem;
+    color:aliceblue;
+    margin-bottom: 0;
+    text-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+.box {
+    background-color: #ddd;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.box .price {
+    font-size: 2.5rem;
+}
+
+.box1{
+    grid-area: box1;
+}
+
+.box2{
+    grid-area: box2;
+}
+
+.box h4{
+    font-size: 1.5rem;
+}
+
+/*constant offer*/
+.wrapper-section{
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    background-color: #ddd;
+    border-radius: 10px;
+    padding:30px;
+}
+
+.wrapper-section h2{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.constant-offer{
+    display: grid;
+    grid-gap:30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.proposition{
+    text-align: center;
+}
+
+/*contact*/
+
+.contact{
+    background-color: #ddd;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    padding: 30px 100px;
+    border-radius: 10px;
+}
+
+.contact h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contact-wrap{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap:60px;
+}
+
+.form-wrap form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:20px;
+}
+.contact-element, 
+.contact-text {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.contact-element:focus,
+.contact-text:focus {
+    outline:none;
+    border: 1px solid #de6757;
+}
+
+.contact-details .social a{
+    text-decoration: none;
+    color:black;
+    line-height: 4em;
+    font-size: 1.2em;
+}
+
+.contact-details .fas{
+    font-size: 1.5em;
+}
+/*gallery*/
+.gallery {
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery img{
+    box-shadow: rgba(104, 104, 104, 0.8);
+    width:100%;
+}
+
+.footer {
+    background-color: #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media(max-width:1025px){
+    .constant-offer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+    }
+    .contact-details .social a{
+        font-size: 1em;
+    }
+    .contact-details .fas{
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 850px){
+    .header{
+        height: 25vh;
+    }
+    .memu ul{
+        grid-template-columns: 1fr;
+    }
+    .wrapper{
+        grid-template-areas: 
+        "offer offer" 
+        "box1 box2";
+    }
+    .offer h1{
+        font-size: 2.5rem;
+
+    }
+    .contact-wrap{
+        grid-template-columns: 1fr;
+        grid-gap:20px;
+    }
+    .contact-details{
+        order: -1;
+    }
+    .contact-details .social a{
+        line-height: 2.5rem;
+    }
+}
+@media(max-width: 650px){
+    .header{
+        height: 20vh;
+    }
+    .wrapper{
+        grid-template-areas: 
+        "offer" 
+        "box1" 
+        "box2";
+    }
+    .contact{
+        padding: 30px 50px;
+    }
+}
